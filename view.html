@@ -188,11 +188,17 @@
         <h2 class="heading">Contact <span>Me</span></h2>
         <form action="https://formspree.io/f/moqgldzz" method="POST">
             <div class="input-box">
-                <input type="text" placeholder="Your Name" name="name">
-                <input type="email" placeholder="Email Address" required name="email">
+                <input type="text" placeholder="Your Name" name="name" required
+                    oninvalid="this.setCustomValidity('required to fill in your name')"
+                    oninput="this.setCustomValidity('')">
+                <input type="email" placeholder="Email Address" required name="email"
+                    oninvalid="this.setCustomValidity('you are required to fill in your email address')"
+                    oninput="this.setCustomValidity('')">
             </div>
 
-            <textarea name="message" id="" cols="30" rows="10" placeholder="Your Massage"></textarea>
+            <textarea name="message" id="" cols="30" rows="10" placeholder="Your Massage" required
+                oninvalid="this.setCustomValidity('you are required to fill in the message you want to convey')"
+                oninput="this.setCustomValidity('')"></textarea>
             <input type="submit" value="Send Massage" class="btn" name="submit">
         </form>
     </section>
