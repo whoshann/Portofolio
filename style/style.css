@@ -646,6 +646,7 @@ span{
     
     html{
         font-size: 50%;
+        overflow-x: hidden;
     }
 
     .contact form .input-box input{
